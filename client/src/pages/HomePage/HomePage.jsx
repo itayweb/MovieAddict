@@ -2,7 +2,9 @@
 
 function HomePage() {
   return (
-    <div>HomePage</div>
+    <div style={{backgroundColor:'#000000'}}>
+      <h1>Hello</h1>
+    </div>
   )
 }
 
