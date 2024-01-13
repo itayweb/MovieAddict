@@ -14,6 +14,7 @@ export const theme = createTheme({
     fontWeight: 500
   },
   palette: {
+    mode: "dark",
     primary: {
         main: '#55BAF2'
     },
@@ -30,7 +31,8 @@ export const theme = createTheme({
         main: '#F2F2F2',
         contrastText: "#000000"
     },
-  }
+  },
+  spacing: 8,
 })
 
 const router = createBrowserRouter([
@@ -43,7 +45,7 @@ const router = createBrowserRouter([
     element:<HomePage/>
   },
   {
-    path:"/Signup",
+    path:"/signup",
     element:<SignupPage/>
   }
 ])

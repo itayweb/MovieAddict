@@ -4,11 +4,13 @@ import { ThemeProvider } from '@emotion/react';
 import { theme } from '../../main';
 import GoogleIcon from '@mui/icons-material/Google';
 import Box from '@mui/material/Box'
+import Cssbaseline from '@mui/material/CssBaseline'
 
 function LoginPage() {
     return (
-        <div style={{backgroundColor:'#000000', minHeight: '100vh', overflow: 'hidden' }}>
+        <div style={{ minHeight: '100vh', overflow: 'hidden' }}>
             <ThemeProvider theme={theme}>  
+            <Cssbaseline/>
                 <Box sx={{margin: 'auto', width: '50%', padding: '10px'}}>
                     <div>
                         <img src={MovieAddictLogo} style={{width: '300px', height:'300px', display:'block', marginLeft:'auto', marginRight: 'auto'}}></img>
