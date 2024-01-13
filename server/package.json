@@ -1,0 +1,26 @@
+{
+  "name": "movieaddict-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itayweb/MovieAddict.git"
+  },
+  "author": "Itay Adler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itayweb/MovieAddict/issues"
+  },
+  "homepage": "https://github.com/itayweb/MovieAddict#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  # server:
+  #   build: ./server
+  #   container_name: server
+  #   ports:
+  #     - "8081:8081"
+  #   volumes:
+  #     - ./server:/backend
+  #     - /backend/node_modules
+    # stdin_open: true
+    # tty: true
+  client:
+    image: movie-addict-ui-image
+    container_name: ui
+    ports:
+      - 8082:8082
+    volumes:
+      - ./client:/frontend
+      - /frontend/node_modules
+  server:
+    image: movie-addict-server-image
+    container_name: server
+    ports:
+      - 8081:8081
+    volumes:
+      - ./server:/backend
+      - /backend/node_modules
+  db:
+    
+    image: ravendb/ravendb:latest
+    container_name: db
+    ports:
+      - 8080:8080
+      - 38888:38888
+    environment:
+      - UNSECURED_ACCESS_ALLOWED=PublicNetwork
+      - PUBLIC_SERVER_URL=http://localhost:8080
+    # build: ./client
+    # container_name: client
+    # ports:
+    #   - "8080:8080"
+    # volumes:
+    #   - ./client/src:/frontend/src
+    #   - /frontend/node_modules
+    # stdin_open: true
+    # tty: true
